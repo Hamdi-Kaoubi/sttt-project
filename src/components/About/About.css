@@ -1,0 +1,117 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem;
+    padding-bottom: 10rem;
+}
+
+.left {
+    width: 45%;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.left .paragraph {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.left h1 {
+    color: var(--primary-color);
+    font-family: var(--title-family);
+    font-size: var(--title-size);
+}
+
+.left p {
+    color: var(--secondry-color);
+    font-family: var(--text-family);
+    font-size: var(--text-size);
+}
+
+.left span {
+    color: var(--primary-color);
+}
+
+.right {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.right h1 {
+    color: var(--secondry-color);
+    font-family: var(--title-family);
+    font-size: var(--title-size);
+}
+.right span {
+    color: var(--primary-color);
+}
+
+.chiffres {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.item {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-family: var(--text-family);
+    color: var(--primary-color);
+    background-color: var(--smooth-white);
+    transition: 0.5s ease;
+}
+
+.item span {
+    color: var(--secondry-color);
+}
+
+.item:hover {
+    cursor: pointer;
+    transform: scale(1.2, 1.2) translateY(-10px);
+    box-shadow: 2px 0 20px #444343;
+    
+}
+
+/*Style for small screens (Mobile)*/
+
+@media screen and (max-width: 769px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .container .devider {
+        display: none;
+    }
+    .left {
+        width: 100%;
+        text-align: start;
+    }
+    .left h1 {
+        font-size: calc(var(--title-size) - 10px);
+    }
+    .right {
+        width: 100%;
+    }
+    .right h1 {
+        font-size: calc(var(--title-size) - 10px);
+        text-align: start;
+    }
+    .chiffres {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

@@ -1,0 +1,41 @@
+.home h5 {
+    font-family: var(--text-family);
+    color: var(--secondry-color);
+  }
+  
+  .home img {
+    width: 100%;
+    height: 40rem;
+  }
+  
+  .swiper-item {
+    position: relative;
+    text-align: start;
+  }
+  
+  .swiper-item h1 {
+    position: absolute;
+    font-family: var(--title-family);
+    font-size: calc(var(--title-size) + 10px);
+    color: var(--primary-color);
+    left: 100px;
+    top: 30%;
+  }
+
+  .swiper-item p {
+    position: absolute;
+    left: 100px;
+    top: 60%;
+  }
+  
+  .swiper-item span {
+    color: var(--secondry-color);
+  }
+
+  /*Style for small screens (Mobile)*/
+
+@media screen and (max-width: 769px) {
+  .swpr-cnt {
+    display: none;
+  }
+}
