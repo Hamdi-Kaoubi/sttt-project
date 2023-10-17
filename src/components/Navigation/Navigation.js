@@ -5,11 +5,23 @@ import { Link, useNavigate } from "react-router-dom";
 import flag1 from "../../assets/Flag-France.webp";
 import flag2 from "../../assets/britain.jpg";
 import { useLanguage } from "../../LanguageContext";
-import DehazeIcon from '@mui/icons-material/Dehaze';
-import CloseIcon from '@mui/icons-material/Close';
+import DehazeIcon from "@mui/icons-material/Dehaze";
+import CloseIcon from "@mui/icons-material/Close";
+import { motion } from "framer-motion";
 
 const Navigation = () => {
-  const {language, handleLanguage} = useLanguage()
+  const buttonVariants = {
+    init: {
+      scale: 1
+    },
+    hover: {
+      scale: 1.1,
+      transition: {
+        yoyo: Infinity
+      }
+    }
+  };
+  const { language, handleLanguage } = useLanguage();
   const [active, setActive] = useState("");
   const [visible, setVisible] = useState(true);
 
@@ -20,15 +32,15 @@ const Navigation = () => {
   };
 
   const handleVisible = () => {
-    setVisible( visible === true ? false : true)
-  }
+    setVisible(visible === true ? false : true);
+  };
 
   return (
     <React.Fragment>
       {language === "fr" ? (
         <div className="nav">
           <img src={logo} alt="logo" onClick={handleNavigate} />
-          <ul className={visible === false ? 'shown' : ''}>
+          <ul className={visible === false ? "shown" : ""}>
             <li
               onClick={handleNavigate}
               className={active === "/" ? "active" : "nav-items"}
@@ -64,15 +76,27 @@ const Navigation = () => {
               <Link to="/contact">Contact</Link>
             </li>
           </ul>
-          <img src={flag1} alt="france" onClick={handleLanguage} className="special"/>
+          <motion.img
+            variants={buttonVariants}
+            initial="init"
+            whileHover="hover"
+            src={flag1}
+            alt="france"
+            onClick={handleLanguage}
+            className="special"
+          />
           <div id="mobile">
-            {visible ? <DehazeIcon onClick={handleVisible} className="visible"/> : <CloseIcon onClick={handleVisible} className="visible"/>}
+            {visible ? (
+              <DehazeIcon onClick={handleVisible} className="visible" />
+            ) : (
+              <CloseIcon onClick={handleVisible} className="visible" />
+            )}
           </div>
         </div>
       ) : (
         <div className="nav">
           <img src={logo} alt="logo" onClick={handleNavigate} />
-          <ul className={visible === true ? 'shown' : ''}>
+          <ul className={visible === true ? "shown" : ""}>
             <li
               onClick={handleNavigate}
               className={active === "/" ? "active" : "nav-items"}
@@ -108,11 +132,20 @@ const Navigation = () => {
               <Link to="/contact">Contact</Link>
             </li>
           </ul>
-          <img src={flag2} alt="english" onClick={handleLanguage} className="special"/>
+          <img
+            src={flag2}
+            alt="english"
+            onClick={handleLanguage}
+            className="special"
+          />
           <div id="mobile">
-            {visible ? <DehazeIcon onClick={handleVisible} className="visible"/> : <CloseIcon onClick={handleVisible} className="visible"/>}
+            {visible ? (
+              <DehazeIcon onClick={handleVisible} className="visible" />
+            ) : (
+              <CloseIcon onClick={handleVisible} className="visible" />
+            )}
           </div>
-          </div>
+        </div>
       )}
     </React.Fragment>
   );

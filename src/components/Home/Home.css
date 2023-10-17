@@ -17,6 +17,8 @@
     position: absolute;
     font-family: var(--title-family);
     font-size: calc(var(--title-size) + 10px);
+    -webkit-text-stroke-color: var(--smooth-white);
+    -webkit-text-stroke-width: 1px;
     color: var(--primary-color);
     left: 100px;
     top: 30%;
@@ -26,10 +28,15 @@
     position: absolute;
     left: 100px;
     top: 60%;
+    font-family: var(--text-family);
+    font-size: calc(var(--text-size) + 5px);
+    
   }
   
   .swiper-item span {
     color: var(--secondry-color);
+    -webkit-text-stroke-color: var(--primary-color);
+    -webkit-text-stroke-width: 1px;
   }
 
   /*Style for small screens (Mobile)*/
