@@ -10,18 +10,36 @@ import team4 from "../../assets/tirage.jpg";
 import team5 from "../../assets/tirage1.jpg";
 import CellTowerIcon from "@mui/icons-material/CellTower";
 import ConstructionIcon from "@mui/icons-material/Construction";
+import { motion } from "framer-motion";
 
-const HomeContent = () => {
+const HomeContent = ({ textVariants }) => {
   const { language } = useLanguage();
   return (
     <React.Fragment>
       {language === "fr" ? (
         <div className="homeCntainer">
-          <h1>STTT, la technologie de demain</h1>
+          <motion.h1
+            variants={textVariants}
+            initial="hidden"
+            whileInView="visible"
+          >
+            STTT, la technologie de demain
+          </motion.h1>
           <div className="homeItems">
             <div className="itm1">
-              <h2>Efficacité</h2>
-              <div className="efficace">
+              <motion.h2
+                variants={textVariants}
+                initial="hidden"
+                whileInView="visible"
+              >
+                Efficacité
+              </motion.h2>
+              <motion.div
+                className="efficace"
+                variants={textVariants}
+                initial="hidden"
+                whileInView="visible"
+              >
                 <div className="avant-apres">
                   <img src={before} alt="before" id="img1" />
                   <p>Avant</p>
@@ -30,58 +48,88 @@ const HomeContent = () => {
                   <img src={after} alt="after" id="img2" />
                   <p>Apres</p>
                 </div>
-              </div>
+              </motion.div>
             </div>
             <div className="itm2">
-              <p>
+              <motion.p
+                variants={textVariants}
+                initial="hidden"
+                whileInView="visible"
+              >
                 Dans le domaine de la technologie des télécommunications, cette
                 entreprise incarne une efficacité et une discipline
                 remarquables. Grâce à une équipe dévouée, elle optimise les
                 ressources et met en œuvre une gestion de projet disciplinée.
                 Cet engagement envers l'innovation la positionne comme un acteur
                 prometteur dans l'industrie.
-              </p>
+              </motion.p>
             </div>
             <div className="itm3">
-              <p>
+              <motion.p
+                variants={textVariants}
+                initial="hidden"
+                whileInView="visible"
+              >
                 La startup compte une équipe motivée et travailleuse, animée par
                 une passion commune pour l'innovation et l'excellence. Leur
                 dévouement est la force motrice derrière le succès de
                 l'entreprise, les propulsant à surmonter les défis et à obtenir
                 des résultats remarquables.
-              </p>
+              </motion.p>
             </div>
             <div className="itm4">
-              <h2>Equipe motivée</h2>
-              <div className="imgs">
+              <motion.h2
+                variants={textVariants}
+                initial="hidden"
+                whileInView="visible"
+              >
+                Equipe motivée
+              </motion.h2>
+              <motion.div
+                className="imgs"
+                variants={textVariants}
+                initial="hidden"
+                whileInView="visible"
+              >
                 <img src={team1} alt="team" />
                 <img src={team2} alt="team" />
                 <img src={team3} alt="team" />
                 <img src={team4} alt="team" />
                 <img src={team5} alt="team" />
-              </div>
+              </motion.div>
             </div>
-            <div className="itm5">
+            <motion.div
+              className="itm5"
+              variants={textVariants}
+              initial="hidden"
+              whileInView="visible"
+            >
               <CellTowerIcon className="installation__icon" />
-              <h2>Infrastructure de réseau</h2>
-              <article>
+              <motion.h2>Infrastructure de réseau</motion.h2>
+              <motion.article>
                 - Installation des nouvelles abonées.
                 <br />
                 - Installation et raccordement des fibres en cuivre et optiques.
                 <br />
                 - Installation des tours de réseau.
                 <br />
-              </article>
-            </div>
-            <div className="itm6">
-              <ConstructionIcon className="installation__icon"/>
+              </motion.article>
+            </motion.div>
+            <motion.div
+              className="itm6"
+              variants={textVariants}
+              initial="hidden"
+              whileInView="visible"
+            >
+              <ConstructionIcon className="installation__icon" />
               <h2>Entretiens & Mesures</h2>
               <article>
-                - Entretiens préventifs.<br/>
-                - Entretiens correctifs et maintenances.<br/>
-                - Etudes, mesures, ADSL, signalisation.
+                - Entretiens préventifs.
+                <br />
+                - Entretiens correctifs et maintenances.
+                <br />- Etudes, mesures, ADSL, signalisation.
               </article>
-            </div>
+            </motion.div>
           </div>
         </div>
       ) : (
@@ -143,12 +191,13 @@ const HomeContent = () => {
               </article>
             </div>
             <div className="itm6">
-              <ConstructionIcon className="installation__icon"/>
+              <ConstructionIcon className="installation__icon" />
               <h2>Maintenance & measurements</h2>
               <article>
-                - Preventive maintenance.<br/>
-                - Corrective maintenance and servicing.<br/>
-                - Studies, measurements, ADSL, signaling.
+                - Preventive maintenance.
+                <br />
+                - Corrective maintenance and servicing.
+                <br />- Studies, measurements, ADSL, signaling.
               </article>
             </div>
           </div>
@@ -157,5 +206,4 @@ const HomeContent = () => {
     </React.Fragment>
   );
 };
-
-export default HomeContent;
+export default React.memo(HomeContent);

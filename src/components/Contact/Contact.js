@@ -8,6 +8,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import './Contact.css'
 import { useLanguage } from '../../LanguageContext';
 import { Helmet } from 'react-helmet';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
 
@@ -31,7 +32,12 @@ return (
         <title>STTT Contact</title>
         <meta name='description' content='STTT is awlays at the customers service and you contact us when ever you need.'/>
     </Helmet>
-        <div className='message'>
+        <motion.div 
+        className='message'
+        initial={{opacity: 0, y: 70}}
+        animate={{opacity: 1, y: 0}}
+        transition={{delay: 0.5}}
+        >
             {language === 'fr' ? (
                 <form ref={form} onSubmit={sendEmail}>
                 <input type='text' name='first_name' placeholder='votre prenom' required/>
@@ -49,8 +55,13 @@ return (
                 <button type='submit'>Send</button>
             </form>
             )}
-        </div>
-        <div className='our-coordinates'>
+        </motion.div>
+        <motion.div 
+        className='our-coordinates'
+        initial={{opacity: 0, y: 70}}
+        animate={{opacity: 1, y: 0}}
+        transition={{delay: 0.8}}
+        >
             <h1>Contact infos</h1>
             <div className='coordinates-item'>
                 <LocationOnIcon style={{cursor: 'pointer'}}/>
@@ -71,12 +82,17 @@ return (
                 <FacebookIcon style={{cursor: 'pointer'}}/>
                 <LinkedInIcon style={{cursor: 'pointer'}}/>
             </div>
-        </div>
-        <div className='maps'>
+        </motion.div>
+        <motion.div 
+        className='maps'
+        initial={{opacity: 0, y: 70}}
+        animate={{opacity: 1, y: 0}}
+        transition={{delay: 1}}
+        >
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5494.57160495608!2d9.460360503598737!3d35.02943269567242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fec35103a9b08d%3A0x7798e114a035c14a!2sCyber%20Parc!5e0!3m2!1sen!2stn!4v1695734279246!5m2!1sen!2stn" title='map' allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+        </motion.div>
     </div>
-  )
+)
 }
 
 export default Contact

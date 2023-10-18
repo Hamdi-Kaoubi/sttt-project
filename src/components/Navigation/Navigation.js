@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import "./Navigation.css";
 import logo from "../../assets/New Project-2.png";
 import { Link, useNavigate } from "react-router-dom";
@@ -17,7 +17,9 @@ const Navigation = () => {
     hover: {
       scale: 1.1,
       transition: {
-        yoyo: Infinity
+        duration: 0.5,
+        repeat: Infinity,
+        repeatDelay: 0.5
       }
     }
   };
@@ -26,14 +28,14 @@ const Navigation = () => {
   const [visible, setVisible] = useState(true);
 
   const navigate = useNavigate();
-  const handleNavigate = () => {
+  const handleNavigate =useCallback( () => {
     navigate("/");
     setActive("/");
-  };
+  }, [navigate]);
 
-  const handleVisible = () => {
+  const handleVisible = useCallback(() => {
     setVisible(visible === true ? false : true);
-  };
+  }, [visible]); 
 
   return (
     <React.Fragment>
@@ -132,7 +134,10 @@ const Navigation = () => {
               <Link to="/contact">Contact</Link>
             </li>
           </ul>
-          <img
+          <motion.img
+            variants={buttonVariants}
+            initial="init"
+            whileHover="hover"
             src={flag2}
             alt="english"
             onClick={handleLanguage}

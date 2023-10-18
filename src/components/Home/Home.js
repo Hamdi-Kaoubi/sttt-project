@@ -22,7 +22,7 @@ const Home = () => {
       y: 0,
       opacity: 1,
       transition: {
-        delay: 0.7,
+        delay: 0.2,
         type: "tween" 
       }
     }
@@ -55,7 +55,7 @@ const Home = () => {
                   </motion.h1>
                   <motion.p
                     style={{
-                      color: "#000",
+                      color: "var(--smooth-white)",
                     }}
                     variants={textVariants}
                     initial="hidden"
@@ -113,7 +113,7 @@ const Home = () => {
               </SwiperSlide>
             </Swiper>
           </div>
-          <HomeContent />
+          <HomeContent textVariants={textVariants}/>
         </div>
       ) : (
         <div className="home">
@@ -142,7 +142,7 @@ const Home = () => {
                     initial="hidden"
                     animate="visible"
                     style={{
-                      color: "#000",
+                      color: "var(--smooth-white)",
                     }}
                   >
                     7days / 7days Throughout the territory of the Tunisian

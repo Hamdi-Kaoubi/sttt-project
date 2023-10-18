@@ -17,6 +17,8 @@
 .up-cntnr:hover {
     opacity: 0.9;
     transform: scale(1.5);
+    background-color: var(--smooth-white);
+    color: var(--primary-color);
 }
 
 /*Style for small screens (Mobile)*/
