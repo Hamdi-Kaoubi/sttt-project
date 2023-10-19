@@ -6,7 +6,7 @@ const Up = () => {
   const [up, setUp] = useState(false);
 
   const handleAppear = () => {
-    if (window.scrollY >= 100) {
+    if (window.scrollY >= 300) {
       setUp(true);
     } else {
       setUp(false);

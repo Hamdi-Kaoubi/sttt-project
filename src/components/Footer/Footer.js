@@ -17,7 +17,7 @@ return (
             </article>
             <div className='flx-bx'>
                 <h6>Email: </h6>
-                <p>contact@sttt.com</p>
+                <p>contacte.sttt@gmail.com</p>
             </div>
             <div className='flx-bx'>
                 <h6>Tél: </h6>

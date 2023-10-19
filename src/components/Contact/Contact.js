@@ -73,7 +73,7 @@ return (
             </div>
             <div className='coordinates-item'>
                 <EmailIcon style={{cursor: 'pointer'}}/>
-                <p>contact@sttt.com</p>
+                <p>contacte.sttt@gmail.com</p>
             </div>
             <div className='coordinates-item'>
                 <CallIcon style={{cursor: 'pointer'}}/>
@@ -81,7 +81,7 @@ return (
             </div>
             <div className='some-icons'>
                 <FacebookIcon style={{cursor: 'pointer'}}/>
-                <LinkedInIcon style={{cursor: 'pointer'}}/>
+                <a href='https://www.linkedin.com/in/sttt-soci%C3%A9t%C3%A9-tasnim-bb0463297/?fbclid=IwAR26velLO-Ihv_w0GudAtK6pQ9yPZY7Etnx81fkUGDQkdRepycSxs7pTXP8' rel="noreferrer" target='_blank'><LinkedInIcon style={{cursor: 'pointer'}}/></a>
             </div>
         </motion.div>
         <motion.div 
