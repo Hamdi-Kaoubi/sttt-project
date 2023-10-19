@@ -20,7 +20,7 @@
 .nav ul {
   list-style: none;
   display: flex;
-  gap: 3rem;
+  gap: 4rem;
   align-items: center;
   font-family: var(--text-family);
   color: var(--secondry-color);
@@ -102,7 +102,7 @@
   #mobile {
     display: block;
     position: fixed;
-    right: 3rem;
+    right: 4rem;
     align-self: center;
   }
   .visible {

@@ -68,13 +68,13 @@ const Navigation = () => {
               onClick={() => setActive("/staff")}
               className={active === "/staff" ? "active" : "nav-items"}
             >
-              <Link to="/staff">Equipe</Link>
+            { /* <Link to="/staff">Equipe</Link>
             </li>
             <li>|</li>
             <li
               onClick={() => setActive("/contact")}
               className={active === "/contact" ? "active" : "nav-items"}
-            >
+      >*/}
               <Link to="/contact">Contact</Link>
             </li>
           </ul>
@@ -98,7 +98,7 @@ const Navigation = () => {
       ) : (
         <div className="nav">
           <img src={logo} alt="logo" onClick={handleNavigate} />
-          <ul className={visible === true ? "shown" : ""}>
+          <ul className={visible === false ? "shown" : ""}>
             <li
               onClick={handleNavigate}
               className={active === "/" ? "active" : "nav-items"}
@@ -124,13 +124,13 @@ const Navigation = () => {
               onClick={() => setActive("/staff")}
               className={active === "/staff" ? "active" : "nav-items"}
             >
-              <Link to="/staff">Team</Link>
+              {/*<Link to="/staff">Team</Link>
             </li>
             <li>|</li>
             <li
               onClick={() => setActive("/contact")}
               className={active === "/contact" ? "active" : "nav-items"}
-            >
+      >*/}
               <Link to="/contact">Contact</Link>
             </li>
           </ul>

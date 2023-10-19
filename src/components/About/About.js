@@ -8,6 +8,7 @@ import Projects from '../Projects/Projects';
 import Clients from '../Clientss/Clients';
 import { useLanguage } from '../../LanguageContext';
 import { Helmet } from 'react-helmet';
+import Workers from '../Workers/Workers';
 
 const About = () => {
 
@@ -29,7 +30,8 @@ const About = () => {
     <Helmet>
         <title>About STTT</title>
         <meta name='description' content='All you need to know about our new STTT startup and more.'/>
-    </Helmet>
+        <meta name="keywords" content="telecommunication, technology, network, wifi, optic-fibre"/>
+        </Helmet>
         {language === 'fr' ? (
             <div className='about'>
         <div className='container'>
@@ -57,12 +59,11 @@ const About = () => {
                 </div>
                 <div className='item'>
                     <a href='#clients' onClick={handleClick('clients')}><GroupAddOutlinedIcon sx={{fontSize: 60, color: '#168aad'}}/></a>
-                    
                     <h3><span>+6</span> Clients</h3>
                     <h4>(Entreprises/ Societés)</h4>
                 </div>
                 <div className='item'>
-                    <EngineeringOutlinedIcon sx={{fontSize: 60, color: '#168aad'}}/>
+                    <a href='#workers' onClick={handleClick('workers')}><EngineeringOutlinedIcon sx={{fontSize: 60, color: '#168aad'}}/></a>
                     <h3><span>22</span> travailleurs</h3>
                     <h4>(En augmentant)</h4>
                 </div>
@@ -71,6 +72,7 @@ const About = () => {
         </div>
         <Projects/>
         <Clients/>
+        <Workers/>
     </div>
         ) : (
             <div className='about'>
@@ -104,7 +106,7 @@ const About = () => {
                     <h4>(Companies/ Societies)</h4>
                 </div>
                 <div className='item'>
-                    <EngineeringOutlinedIcon sx={{fontSize: 60, color: '#168aad'}}/>
+                <a href='#workers' onClick={handleClick('workers')}><EngineeringOutlinedIcon sx={{fontSize: 60, color: '#168aad'}}/></a>
                     <h3><span>22</span> workers</h3>
                     <h4>(increasing)</h4>
                 </div>
@@ -113,6 +115,7 @@ const About = () => {
         </div>
         <Projects/>
         <Clients/>
+        <Workers/>
     </div>
         )}
     </React.Fragment>

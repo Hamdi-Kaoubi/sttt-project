@@ -31,6 +31,7 @@ return (
     <Helmet>
         <title>STTT Contact</title>
         <meta name='description' content='STTT is awlays at the customers service and you contact us when ever you need.'/>
+        <meta name="keywords" content="telecommunication, technology, network, wifi, optic-fibre"/>
     </Helmet>
         <motion.div 
         className='message'

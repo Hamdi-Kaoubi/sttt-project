@@ -10,6 +10,7 @@ const Staff = () => {
     <Helmet>
         <title>STTT Staff</title>
         <meta name='description' content='STTT has a motivated and discipline team that works in every condition.'/>
+        <meta name="keywords" content="telecommunication, technology, network, wifi, optic-fibre"/>
     </Helmet>
     <div className='staff'>
     <Card

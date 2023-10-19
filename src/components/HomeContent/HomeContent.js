@@ -134,11 +134,28 @@ const HomeContent = ({ textVariants }) => {
         </div>
       ) : (
         <div className="homeCntainer">
-          <h1>STTT, the technology of tomorrow</h1>
+          <motion.h1 
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          >
+            STTT, the technology of tomorrow
+          </motion.h1>
           <div className="homeItems">
             <div className="itm1">
-              <h2>Efficiency</h2>
-              <div className="efficace">
+              <motion.h2 
+              variants={textVariants}
+              initial="hidden"
+              whileInView="visible"
+              >
+                Efficiency
+              </motion.h2>
+              <motion.div 
+              className="efficace"
+              variants={textVariants}
+              initial="hidden"
+              whileInView="visible"
+              >
                 <div className="avant-apres">
                   <img src={before} alt="before" id="img1" />
                   <p>Before</p>
@@ -147,10 +164,14 @@ const HomeContent = ({ textVariants }) => {
                   <img src={after} alt="after" id="img2" />
                   <p>After</p>
                 </div>
-              </div>
+              </motion.div>
             </div>
             <div className="itm2">
-              <p>
+              <motion.p 
+              variants={textVariants}
+              initial="hidden"
+              whileInView="visible"
+              >
                 In the field of telecommunications technology, this company
                 exemplifies remarkable efficiency and discipline. With a
                 dedicated team, it optimizes resources and employs disciplined
@@ -158,27 +179,47 @@ const HomeContent = ({ textVariants }) => {
                 as a promising player in the industry. You're welcome! If you
                 have any more questions or need further assistance, feel free to
                 ask.
-              </p>
+              </motion.p>
             </div>
             <div className="itm3">
-              <p>
+              <motion.p 
+              variants={textVariants}
+              initial="hidden"
+              whileInView="visible"
+              >
                 The startup boasts a motivated and hardworking team, driven by a
                 shared passion for innovation and excellence. Their dedication
                 is the driving force behind the company's success, propelling
                 them to overcome challenges and achieve remarkable results.
-              </p>
+              </motion.p>
             </div>
             <div className="itm4">
-              <h2>Motivated team</h2>
-              <div className="imgs">
+              <motion.h2 
+              variants={textVariants}
+              initial="hidden"
+              whileInView="visible"
+              >
+                Motivated team
+              </motion.h2>
+              <motion.div 
+              className="imgs"
+              variants={textVariants}
+              initial="hidden"
+              whileInView="visible"
+              >
                 <img src={team1} alt="team" />
                 <img src={team2} alt="team" />
                 <img src={team3} alt="team" />
                 <img src={team4} alt="team" />
                 <img src={team5} alt="team" />
-              </div>
+              </motion.div>
             </div>
-            <div className="itm5">
+            <motion.div 
+            className="itm5"
+            variants={textVariants}
+            initial="hidden"
+            whileInView="visible"
+            >
               <CellTowerIcon className="installation__icon" />
               <h2>Network infrastructure</h2>
               <article>
@@ -189,8 +230,13 @@ const HomeContent = ({ textVariants }) => {
                 - Installation of network towers.
                 <br />
               </article>
-            </div>
-            <div className="itm6">
+            </motion.div>
+            <motion.div 
+            className="itm6"
+            variants={textVariants}
+            initial="hidden"
+            whileInView="visible"
+            >
               <ConstructionIcon className="installation__icon" />
               <h2>Maintenance & measurements</h2>
               <article>
@@ -199,7 +245,7 @@ const HomeContent = ({ textVariants }) => {
                 - Corrective maintenance and servicing.
                 <br />- Studies, measurements, ADSL, signaling.
               </article>
-            </div>
+            </motion.div>
           </div>
         </div>
       )}

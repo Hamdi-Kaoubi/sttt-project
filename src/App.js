@@ -8,7 +8,7 @@ import About from './components/About/About';
 import Up from './components/Up/Up';
 import Footer from './components/Footer/Footer';
 import Contact from './components/Contact/Contact';
-import Staff from './components/Staff/Staff';
+// import Staff from './components/Staff/Staff';
 import Services from './components/Servicess/Services';
 import { Helmet } from 'react-helmet';
 
@@ -54,7 +54,7 @@ function App() {
             <Route path='/' element={<Home/>} />
             <Route  path='/about' element={<About/>}/>
             <Route path='/services' element={<Services/>} />
-            <Route path='/staff' element={<Staff/>} />
+            {/*<Route path='/staff' element={<Staff/>} />*/}
             <Route path='/contact' element={<Contact/>}/>
           </Routes>
           <Up/>

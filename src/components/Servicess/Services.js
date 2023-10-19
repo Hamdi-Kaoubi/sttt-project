@@ -19,6 +19,7 @@ const Services = () => {
     <Helmet>
         <title>STTT Services</title>
         <meta name='description' content='discover the services that STTT start up offer.'/>
+        <meta name="keywords" content="telecommunication, technology, network, wifi, optic-fibre"/>
     </Helmet>
       {language === 'fr' ? (
         <div className="services">

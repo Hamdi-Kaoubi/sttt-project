@@ -5,10 +5,7 @@ import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { motion } from "framer-motion";
-import image1 from "../../assets/76825.jpg";
-import image2 from "../../assets/12356.png";
-import image3 from "../../assets/young-man-engineer-making-program-analyses.jpg";
-import image4 from "../../assets/miniature-engineer-worker-plug-lan-cable-computer.jpg";
+import image1 from "../../assets/12356.png";
 import { useLanguage } from "../../LanguageContext";
 import HomeContent from "../HomeContent/HomeContent";
 
@@ -42,7 +39,7 @@ const Home = () => {
             >
               <SwiperSlide>
                 <div className="swiper-item">
-                  <img src={image2} alt="" />
+                  <img src={image1} alt="" />
                   <motion.h1
                     variants={textVariants}
                     initial="hidden"
@@ -70,23 +67,20 @@ const Home = () => {
                 <div className="swiper-item">
                   <img src={image1} alt="" />
                   <h1>
-                    Soutenons toujours la technologie <span>de demain</span>
+                    Soutenons toujours la technologie <span style={{ color: "var(--smooth-white)" }}>de demain</span>
                   </h1>
                   <p style={{ color: "white" }}>
                     7 jours / 7jours Sur tout le territoire de la République
                     Tunisienne
                   </p>
-                  <a href="http://www.freepik.com" style={{ display: "none" }}>
-                    Designed by kjpargeter / Freepik
-                  </a>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div className="swiper-item">
-                  <img src={image3} alt="" />
-                  <h1 style={{ color: "white" }}>
+                  <img src={image1} alt="" />
+                  <h1>
                     Sociéte Tasnime des Techniques de{" "}
-                    <span style={{ color: "white" }}>
+                    <span style={{ color: "var(--smooth-white)" }}>
                       Télécommunication ...
                     </span>
                   </h1>
@@ -98,7 +92,7 @@ const Home = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <div className="swiper-item">
-                  <img src={image4} alt="" />
+                  <img src={image1} alt="" />
                   <h1>
                     Sociéte Tasnime des Techniques de{" "}
                     <span style={{ color: "white" }}>
@@ -126,7 +120,7 @@ const Home = () => {
             >
               <SwiperSlide>
                 <div className="swiper-item">
-                  <img src={image2} alt="" />
+                  <img src={image1} alt="" />
                   <motion.h1
                   variants={textVariants}
                     initial="hidden"
@@ -148,9 +142,6 @@ const Home = () => {
                     7days / 7days Throughout the territory of the Tunisian
                     Republic
                   </motion.p>
-                  <a href="http://www.freepik.com" style={{ display: "none" }}>
-                    Designed by rawpixel.com / Freepik
-                  </a>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
@@ -163,14 +154,11 @@ const Home = () => {
                     7 jours / 7jours Sur tout le territoire de la République
                     Tunisienne
                   </p>
-                  <a href="http://www.freepik.com" style={{ display: "none" }}>
-                    Designed by kjpargeter / Freepik
-                  </a>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div className="swiper-item">
-                  <img src={image3} alt="" />
+                  <img src={image1} alt="" />
                   <h1 style={{ color: "white" }}>
                     Sociéte Tasnime des Techniques de{" "}
                     <span style={{ color: "white" }}>
@@ -185,7 +173,7 @@ const Home = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <div className="swiper-item">
-                  <img src={image4} alt="" />
+                  <img src={image1} alt="" />
                   <h1>
                     Sociéte Tasnime des Techniques de{" "}
                     <span style={{ color: "white" }}>
@@ -200,7 +188,7 @@ const Home = () => {
               </SwiperSlide>
             </Swiper>
           </div>
-          <HomeContent />
+          <HomeContent textVariants={textVariants}/>
         </div>
       )}
     </React.Fragment>
