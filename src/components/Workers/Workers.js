@@ -1,46 +1,46 @@
 import React from 'react'
 import './Workers.css'
 import { useLanguage } from '../../LanguageContext'
-import image from '../../assets/gerant.jpg'
+// import image from '../../assets/gerant.jpg'
 
 
 const workerData = [
     {
         id: 1,
-        name: 'Azizi Habib',
-        image:image,
+        name: 'xxx xxx',
+        image:"https://i.pinimg.com/564x/d0/17/47/d01747c4285afa4e7a6e8656c9cd60cb.jpg",
         position: 'Gerant de STTT'
     },
     {
         id: 2,
-        name: 'Azizi Habib',
-        image:image,
+        name: 'xxx xxx',
+        image:"https://i.pinimg.com/564x/d0/17/47/d01747c4285afa4e7a6e8656c9cd60cb.jpg",
         position: 'Gerant de STTT'
     },
     {
         id: 3,
-        name: 'Azizi Habib',
-        image:image,
+        name: 'xxx xxx',
+        image:"https://i.pinimg.com/564x/d0/17/47/d01747c4285afa4e7a6e8656c9cd60cb.jpg",
         position: 'Gerant de STTT'
     },
 ];
 const workerData2 = [
     {
         id: 1,
-        name: 'Azizi Habib',
-        image:image,
+        name: 'xxx xxx',
+        image:"https://i.pinimg.com/564x/d0/17/47/d01747c4285afa4e7a6e8656c9cd60cb.jpg",
         position: 'STTT Manager'
     },
     {
         id: 2,
-        name: 'Azizi Habib',
-        image:image,
+        name: 'xxx xxx',
+        image:"https://i.pinimg.com/564x/d0/17/47/d01747c4285afa4e7a6e8656c9cd60cb.jpg",
         position: 'STTT Manager'
     },
     {
         id: 3,
-        name: 'Azizi Habib',
-        image:image,
+        name: 'xxx xxx',
+        image:"https://i.pinimg.com/564x/d0/17/47/d01747c4285afa4e7a6e8656c9cd60cb.jpg",
         position: 'STTT Manager'
     },
 ];
